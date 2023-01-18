@@ -1,7 +1,6 @@
 package seminar1Task1;
 
-import java.io.FileWriter;
-import java.io.IOException;
+
 import java.util.ArrayList;
 
 public class Program {
@@ -9,7 +8,7 @@ public class Program {
     // 1 Выбросить случайное целое число в диапазоне от 0 до 2000 и сохранить в i
     public static int randomNum(int min, int max) {
         int num = (int) (Math.random() * ((max - min) + 1)) + min;
-        return num;
+        return num; 
     }
 
     // 2 Посчитать и сохранить в n номер старшего значащего бита выпавшего числа
