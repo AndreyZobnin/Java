@@ -1,13 +1,13 @@
-package seminar3Task.Seminar3Task;
+package Seminar3Task;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Random;
-import java.util.Objects;
-import java.util.List;
+//import java.util.Objects;
+//import java.util.List;
 
-public class Program11 {
+public class Program {
     public static void name(String[] args) {
         Random rnd = new Random();
         int number1;
@@ -30,6 +30,12 @@ public class Program11 {
         //Collections.sort(list2);
         System.out.println(list1);
         System.out.println(list2);
+        //удаляем из первого списка элементы которые отсутсвуют во 2ом списке
+        for (int i = 0; i < list1.size(); i++) {
+            if (list2.get(i) != list1.get(i))
+            list1.remove(i);
+        }
+        System.out.println(list1);
     }
 
     
