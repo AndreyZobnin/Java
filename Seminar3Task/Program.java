@@ -7,7 +7,7 @@ import java.util.Random;
 //import java.util.Objects;
 //import java.util.List;
 
-public class Program {
+public class program {
     public static void name(String[] args) {
         Random rnd = new Random();
         int number1;
@@ -36,6 +36,25 @@ public class Program {
             list1.remove(i);
         }
         System.out.println(list1);
+        Collections.sort(list2, Collections.reverseOrder());
+        System.out.println(" Проводим сортировку по уменьшению значений ");
+        System.out.println(list2);
+    
+        //сортировка пузырьковая
+        boolean isSorted = false;
+        int tmp;
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 0; i < list1.size()-1; i++ ) {
+                if (list1.get(i) > list1.get(i+1)) {
+                    tmp = list1.get(i);
+                    list1.set(i, list1.get(i+1));
+                    list1.set(i + 1, tmp);
+                        isSorted=false;
+                           }
+            }
+        }
+
     }
 
     
