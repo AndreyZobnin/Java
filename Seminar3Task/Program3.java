@@ -1,23 +1,23 @@
+/* 1 Объявить два списка список ArrayList, в каждый добавить по 20 случайных чисел. Удалить из первого списка элементы отсутствующие во втором списке. Отсортировать первый список методом sort класса Collections.
+2 * Отсортировать второй список методом sort списка и компаратором по уменьшению.
+3 **Отсортировать первый список пузырьковой сортировкой самостоятельно, без использования доп методов и классов. */
 package Seminar3Task;
 
 import java.util.ArrayList;
 import java.util.Collections;
-//import java.util.Arrays;
 import java.util.Random;
-//import java.util.Objects;
-//import java.util.List;
 
-public class program {
-    public static void name(String[] args) {
+public class Program3 {
+    public static void main(String[] args) {
         Random rnd = new Random();
         int number1;
         int number2;
         ArrayList<Integer> list1 = new ArrayList<Integer>();
         ArrayList<Integer> list2 = new ArrayList<Integer>();
         for (Integer counter = 1; counter <= 20; counter++) {
-            number1 = rnd.nextInt(100);
+            number1 = rnd.nextInt(101);
             while (list1.contains(number1)) {
-                number1 = rnd.nextInt(100);
+                number1 = rnd.nextInt(101);
             }
             number2 = rnd.nextInt(100);
             while (list1.contains(number2)) {
@@ -54,7 +54,8 @@ public class program {
                            }
             }
         }
-
+        System.out.println("Пузырьковая сортировка");
+        System.out.println(list1);
     }
 
     
