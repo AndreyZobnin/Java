@@ -3,8 +3,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
+
 
 public class Program {
     public static void main(String[] args) throws IOException {
@@ -17,7 +17,7 @@ public class Program {
         LinkedList<Integer> indexes = new LinkedList<>();
 
         try {
-            try (FileWriter wr = new FileWriter("DB.sql")) {
+            try (FileWriter wr = new FileWriter("db.sql")) {
                	wr.append("Зобнин Андрей Владимирович 40 М\n");
                 wr.append("Иванов Иван Иванович 34 М\n");
                 wr.append("Сачков Виталий Олегович 44 М\n");
