@@ -17,16 +17,16 @@ public class Program {
         if (!dictPeople.containsKey(6)) {
             dictPeople.put(6, "Галкин Александ Александрович 46 Ж");
         }
-        List<Map.Entry<Integer, String>> list = new ArrayList<>(dictPeople.entrySet());
-        Collections.sort(list, new Comparator <Map.Entry<Integer, String>>()  {
-            public int compare (Map.Entry<Integer, String> entry1, Map.Entry<Integer, String> entry2){
-                return Integer.compare(Integer.parseInt(entry1.getValue().split(" ") [3]),
-                Integer.parseInt(entry2.getValue().split(" ") [3]));
-        }
-    });
-    System.out.println("\nСортировка по возрастанию: \n");
-    int count = 1;
-    for (Map.Entry<Integer, String> entry : list) {
+            List<Map.Entry<Integer, String>> list = new ArrayList<>(dictPeople.entrySet());
+            Collections.sort(list, new Comparator <Map.Entry<Integer, String>>()  {
+        public int compare (Map.Entry<Integer, String> entry1, Map.Entry<Integer, String> entry2){
+            return Integer.compare(Integer.parseInt(entry1.getValue().split(" ") [3]),
+            Integer.parseInt(entry2.getValue().split(" ") [3]));
+			}
+        });
+        System.out.println("\nСортировка по возрастанию: \n");
+        int count = 1;
+        for (Map.Entry<Integer, String> entry : list) {
         String[] parts = entry.getValue().split(" ");
         String surname = parts[0];
         String initials = parts [1].charAt(0) + "." + parts[2].charAt(0) + ".";
@@ -35,7 +35,6 @@ public class Program {
         System.out.println(count + "." + surname + " " +initials + " " + age + " " + gender.toUpperCase());
         count++;
         
+        }
     }
-    }
-    
 }
