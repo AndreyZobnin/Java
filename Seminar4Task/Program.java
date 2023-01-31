@@ -1,8 +1,12 @@
+/* 1.Сохранить в файл строку и загрузить из файла строку с выводом в консоль используя классы FileWriter и FileReader
+2.Загрузить из файла многострочный текст формата ФИО возраст и пол через пробелы. Разбить по строкам и вывести в консоль в формате "Иванов И.И. 32 М"
+3.Загруженный и разбитый по строкам текст загрузить в подготовленные списки. Фамилии, имена, отчества, возрас и пол в отдельных списках.
+4.Отсортировать по возрасту используя дополнительный список индексов. */
 package Seminar4Task;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.*;
 
 
@@ -51,7 +55,7 @@ public class Program {
             indexes.add(i);
         }
 
-        System.out.println("\nЭтот Список отсортирован по возрасту:");
+        System.out.println("\nА этот Список отсортирован по возрасту:");
         sortIndexesByIntList(age, indexes);
         printFromLists(familyName, name, surName, age, gender, indexes);
     }
